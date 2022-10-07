@@ -5,14 +5,14 @@ app.set("port", process.env.PORT || 80);
 
 app.get('/', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
-   var response = { "response" : "This is GET method." }
+   var response = { "<h1>Hello" : "Welcome to Market Place!.</h1>" }
    console.log(response);
    res.end(JSON.stringify(response));
 })
 
 app.get('/:id', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
-   var response = { "response" : "This is GET method with id=" + req.params.id + "." }
+   var response = { "Hello, ": + req.params.id +", Wellcome to Marketplace!" }
    console.log(response);
    res.end(JSON.stringify(response));
 })
